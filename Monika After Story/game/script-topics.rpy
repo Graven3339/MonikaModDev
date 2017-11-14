@@ -3014,6 +3014,23 @@ label monika_motivation:
     m "Don't push yourself too hard. If you ever feel tempted to, just ask me for help instead. I'd be happy to lend a hand!"
     return
 
+init 5 python:
+    for key in ['real name', 'trigger']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_username')
+    monika_random_topics.append('monika_username')
+
+label monika_username:
+    m "Hey, [currentuser]."
+    m "I know I never say your real name all too often."
+    m "It's cause I still have problems hearing you."
+    m "Some of the things that you say, it sounds odd, sort of like you're speaking in a diffrent language."
+    m "I still don't have a perfect handle coding this part in yet."
+    m "But when I do, I can't wait too hear even more of you!"
+    m "So bear with me until that day comes ok?~"
+    m "I love you, [currentuser].~ "
+return
+
 ##################
 #Incomplete ideas#
 ##################
